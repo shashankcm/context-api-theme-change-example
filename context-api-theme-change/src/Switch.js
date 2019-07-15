@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IoMdMoon as Moon, IoMdSunny as Sun } from "react-icons/io";
 
+import ThemeContext from "./ThemeContext";
+
 const Switch = () => {
+  const { dark, toggle } = useContext(ThemeContext);
   return (
-    <button className="Switch">
-      <Sun className="icon" />
-      <Moon className="icon" />
+    <button className="Switch" onClick={() => toggle()}>
+      <Sun className={`icon ${!dark ? "active" : ""}`} />
+      <Moon className={`icon ${dark ? "active" : ""}`} />
     </button>
   );
 };
