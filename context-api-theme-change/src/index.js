@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import { ThemeProvider } from "./ThemeContext";
+import { Router } from "@reach/router";
+
+import ThemeChange from "./ThemeChange/App";
+import LanguageChange from "./LanguageChange/index";
 
 ReactDOM.render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>,
+  <Router>
+    <ThemeChange path="ThemeChange" />
+    <LanguageChange path="LanguageChange" />
+  </Router>,
+
   document.getElementById("root")
 );
