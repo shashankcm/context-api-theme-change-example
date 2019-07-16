@@ -7,7 +7,7 @@ const Card = props => {
   const { card } = useContext(LanguageContext).currentLanguageData;
 
   return (
-    <div className="Card">
+    <div className="MyCard">
       <div className="img-container">
         <img src={data.img} alt={data.title} />
       </div>

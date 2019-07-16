@@ -13,10 +13,10 @@ const App = () => {
   }, [lang]);
 
   return (
-    <div className="App">
+    <div className="MyApp">
       <h1>{currentLanguageData.app.h1}</h1>
       <LangSwitch />
-      <div className="Cards">
+      <div className="MyCards">
         {state.map((item, idx) => (
           <Card key={idx} data={item} />
         ))}
